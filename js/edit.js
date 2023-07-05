@@ -1,8 +1,18 @@
-const emaiilEdit = document.querySelector('#getEmailEdit')
+const emailEdit = document.querySelector('#getEmailEdit')
 const btnEdit = document.querySelector('#btnEdit')
 
 btnEdit.addEventListener('click', function(){
-  emaiilEdit.disabled = false
-  emaiilEdit.style.color = 'black'
+  emailEdit.disabled = false
+  emailEdit.focus()
+  emailEdit.style.color = 'black'
+})
+
+emailEdit.addEventListener('input', function(){
   btnEdit.textContent = 'Enviar'
 })
+
+function disabledEmail(){
+  emailEdit.disabled = true
+}
+
+disabledEmail()
